@@ -1,0 +1,32 @@
+@extends('master') 
+@section('content') 
+<div id="main_wrapper">
+			<div class="page_content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">Invoeren niewe abbonementensoort</div>
+								<div class="panel-body">
+									 <div id="wizard_form">
+													<section>
+												      <div class="form-group">
+                                 {{ Form::opem('route => abbonementen.store')}}
+													       {{ Form::select('soort1', ['Jaarabbonement', 'Knipkaart', 'Half-jaar abbonement', 'Kwartaal abbonement']) }};
+												      </div>
+												     <div class="form-group">
+													        {{ Form::select('soort1', ['Klein', 'Middel', 'Groot']) }};
+												     </div>
+												     <div class="form-group">
+													          {{ Form::label('bedrag', 'Bedrag') }}
+                                    {{ Form::text('bedrag') }}
+												    </div>
+                           {{Form:submit('abbonementen opslaan')}}
+                           {{Form::close()}}
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+     </div>
+ </div> 
