@@ -11,17 +11,14 @@
 									 <div id="wizard_form">
 													<section>
 												      <div class="form-group">
-                                 {{ Form::opem('route => abbonementen.store')}}
-													       {{ Form::select('soort1', ['Jaarabbonement', 'Knipkaart', 'Half-jaar abbonement', 'Kwartaal abbonement']) }};
+                                 {{ Form::open(['route' => 'abbonementen.store']) }}
+													       {{ Form::select('abbonement-soort', ['Jaarabbonement - groot', 'Jaarabbonement -middel', 'Jaarabbonement - klein ', 'knipkaart']) }};
 												      </div>
-												     <div class="form-group">
-													        {{ Form::select('soort1', ['Klein', 'Middel', 'Groot']) }};
-												     </div>
-												     <div class="form-group">
+												      <div class="form-group">
 													          {{ Form::label('bedrag', 'Bedrag') }}
-                                    {{ Form::text('bedrag') }}
-												    </div>
-                           {{Form:submit('abbonementen opslaan')}}
+                                    {{ Form::input('decimal', 'bedrag') }}
+											 	    </div>
+                           {{Form::submit('abbonementen opslaan')}}
                            {{Form::close()}}
                    </div>
                 </div>

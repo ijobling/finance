@@ -31,7 +31,9 @@ class AbbonementenController extends \BaseController {
 	 */
 	public function store()
 	{
-		return "dit is gelukt";  
+		    $abonnementen = New Abbonement; 
+        $abonnementen->bedrag  = Input::get('bedrag'); 
+        $abonnementen->save();   
 	}
 
 

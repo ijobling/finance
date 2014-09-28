@@ -68,7 +68,7 @@
 						<div class="side_inner">
 							<h4 class="panel_heading panel_heading_first">Instellingen</h4>
 							<ul>
-								<li><a href="/abbonementen/create"><span class="side_icon ion-plus"></span> Niewe Abbonementen</a></li>
+								<li><a href="{{ URL::route('abbonementen.create', null) }} "><span class="side_icon ion-plus"></span> Niewe Abbonementen</a></li>
 							</ul>
             </div>
          </div>

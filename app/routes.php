@@ -15,4 +15,4 @@ Route::get('/', array('as' => 'home', 'uses' => 'HomeController@showDashboard' )
 
 Route::resource ('abbonementen', 'AbbonementenController'); 
 
-#Route::get('/abbonementen/create', 'AbbonementenController@create'); 
+ 
